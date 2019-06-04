@@ -66,7 +66,7 @@ namespace ReversiTutorial.Completed
 			// 石の数を更新
 			darkDiskCountText.text = $"{GameManager.instance.board.Count(Player.Dark)}";
 			lightDiskCountText.text = $"{GameManager.instance.board.Count(Player.Light)}";
-			//
+			// ゲームの終了時の処理
 			if (GameManager.instance.board.IsEnd())
 			{
 				var b = GameManager.instance.board.Balance(Player.Dark);
