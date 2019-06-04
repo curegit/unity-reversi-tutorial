@@ -58,14 +58,16 @@ namespace ReversiTutorial.Completed
 		/// </summary>
 		private void Update()
 		{
-			// 
+			// アニメーション割合（0～1）の変化量を計算
 			var delta = Time.deltaTime / animTime;
-			// 
+			// 現在のアニメーション割合（0～1）を求める
 			animDarkToLight = Mathf.MoveTowards(animDarkToLight, destination, delta);
-			// 
+			// アニメーション割合（0～1）に応じて球面線形補間によって回転させる
 			transform.rotation = Quaternion.Slerp(Quaternion.Euler(darkRotation), Quaternion.Euler(lightRotation), animDarkToLight);
-			// 
-			transform.position = (square ? square.Position() : Vector3.zero) + Vector3.up * thickness / 2 + flipHeight * Vector3.up * Mathf.Sin(Mathf.PI * animDarkToLight);
+			// 盤面上（空中でない）の位置を求める
+			var pos = Vector3.up * thickness / 2 + flipHeight * Vector3.up * Mathf.Sin(Mathf.PI * animDarkToLight);
+			// アニメーション位置も含めた位置を求めて移動させる
+			transform.position = square.Position() + pos;
 		}
 
 		/// <summary>
