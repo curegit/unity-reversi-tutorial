@@ -6,42 +6,42 @@ using ReversiTutorial.Model;
 namespace ReversiTutorial.Completed
 {
 	/// <summary>
-	/// 
+	/// UIの制御
 	/// </summary>
 	public class UI : MonoBehaviour
 	{
 		/// <summary>
-		/// 
+		/// パスボタン
 		/// </summary>
 		[SerializeField]
 		private Button passButton;
 
 		/// <summary>
-		/// 
+		/// 黒石の数を表示するテキスト
 		/// </summary>
 		[SerializeField]
 		private Text darkDiskCountText;
 
 		/// <summary>
-		/// 
+		/// 白石の数を表示するテキスト
 		/// </summary>
 		[SerializeField]
 		private Text lightDiskCountText;
 
 		/// <summary>
-		/// 
+		/// 結果を表示するテキスト
 		/// </summary>
 		[SerializeField]
 		private Text resultText;
 
 		/// <summary>
-		/// 
+		/// ゲーム終了時にだすダイアログ
 		/// </summary>
 		[SerializeField]
 		private GameObject gameEndDialog;
 
 		/// <summary>
-		/// 
+		/// 初期化時に呼ばれる
 		/// </summary>
 		private void Start()
 		{
@@ -50,11 +50,11 @@ namespace ReversiTutorial.Completed
 		}
 
 		/// <summary>
-		/// 
+		/// 毎フレームの処理
 		/// </summary>
 		private void Update()
 		{
-			// 
+			// パスボタンの有効/無効を切り替える
 			if (!GameManager.instance.board.CanMove() && !GameManager.instance.board.IsEnd())
 			{
 				passButton.interactable = true;
@@ -63,14 +63,12 @@ namespace ReversiTutorial.Completed
 			{
 				passButton.interactable = false;
 			}
-			//
+			// 石の数を更新
 			darkDiskCountText.text = $"{GameManager.instance.board.Count(Player.Dark)}";
 			lightDiskCountText.text = $"{GameManager.instance.board.Count(Player.Light)}";
-
 			//
 			if (GameManager.instance.board.IsEnd())
 			{
-				//
 				var b = GameManager.instance.board.Balance(Player.Dark);
 				if (b > 0)
 				{
@@ -84,7 +82,6 @@ namespace ReversiTutorial.Completed
 				{
 					resultText.text = "Even";
 				}
-				//
 				resultText.gameObject.SetActive(true);
 				gameEndDialog.SetActive(true);
 			}
@@ -96,7 +93,7 @@ namespace ReversiTutorial.Completed
 		}
 
 		/// <summary>
-		/// 
+		/// パスボタンが押されたとき
 		/// </summary>
 		public void OnPassButtonClicked()
 		{
@@ -104,7 +101,7 @@ namespace ReversiTutorial.Completed
 		}
 
 		/// <summary>
-		/// 
+		/// 再戦ボタンが押されたとき
 		/// </summary>
 		public void OnRetryButtonClicked()
 		{
@@ -112,7 +109,7 @@ namespace ReversiTutorial.Completed
 		}
 
 		/// <summary>
-		/// 
+		/// 終了ボタンが押されたとき
 		/// </summary>
 		public void OnExitButtonClicked()
 		{
