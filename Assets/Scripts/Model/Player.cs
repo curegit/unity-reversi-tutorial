@@ -1,4 +1,4 @@
-﻿namespace ReversiTutorial.Model
+namespace ReversiTutorial.Model
 {
 	/// <summary>
 	/// すべてのプレイヤー
