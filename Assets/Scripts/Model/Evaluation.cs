@@ -31,18 +31,10 @@ namespace ReversiTutorial.Model
 		/// <returns>特定のプレイヤーに対する盤の評価</returns>
 		public static int Evaluate(Board board, Player player)
 		{
-			/*
-			var squares = Enumerable.Range(0, board.size).SelectMany(x => Enumerable.Range(0, board.size).Select(z => new Position(x, z)));
-			var my = squares.Where(v => board.GetDisk(v.x, v.z) == player).Sum(v => Weight(v.x, v.z, board.size));
-			var opp = squares.Where(v => board.GetDisk(v.x, v.z) != player && board.GetDisk(v.x, v.z) != null).Sum(v => Weight(v.x, v.z, board.size));
-			*/
 			var players = board.DiskPositions(player);
 			var opponents = board.DiskPositions(player == Player.Dark ? Player.Light : Player.Dark);
-
 			var my = players.Sum(v => Weight(v.x, v.z, board.size));
 			var opp = opponents.Sum(v => Weight(v.x, v.z, board.size));
-		
-
 			return my - opp;
 		}
 

@@ -2,9 +2,6 @@ using System;
 using System.Linq;
 using System.Collections.Generic;
 
-
-using UnityEngine;
-
 namespace ReversiTutorial.Model
 {
 	/// <summary>
@@ -85,7 +82,7 @@ namespace ReversiTutorial.Model
 				throw new InvalidOperationException();
 			}
 			var b = Copy();
-			
+
 			var turnovers = b.GetTurnovers(x, z, turn);
 			foreach (var turnover in turnovers)
 			{
@@ -234,8 +231,6 @@ namespace ReversiTutorial.Model
 					}
 				}
 			}
-
-
 			return list.AsReadOnly();
 		}
 
