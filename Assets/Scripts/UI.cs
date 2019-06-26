@@ -45,7 +45,7 @@ namespace ReversiTutorial
 		private void Update()
 		{
 			// パスボタンの有効/無効を切り替える
-			if (!GameManager.instance.board.CanMove() && !GameManager.instance.board.IsEnd())
+			if (!GameManager.instance.isAITurn && !GameManager.instance.board.CanMove() && !GameManager.instance.board.IsEnd())
 			{
 				passButton.interactable = true;
 			}

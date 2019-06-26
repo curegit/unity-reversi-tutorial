@@ -67,6 +67,11 @@ namespace ReversiTutorial.Completed
 		private bool thinking;
 
 		/// <summary>
+		/// AIの番であるか
+		/// </summary>
+		public bool isAITurn => board.turn == Player.Dark && useAIDark || board.turn == Player.Light && useAILight;
+
+		/// <summary>
 		/// 初期化時に呼ばれる
 		/// </summary>
 		public void Awake()
@@ -123,7 +128,7 @@ namespace ReversiTutorial.Completed
 		{
 			if (board.turn == Player.Dark && useAIDark || board.turn == Player.Light && useAILight)
 			{
-				if (board.CanMove() && !thinking)
+				if (!board.IsEnd() && !thinking)
 				{
 					thinking = true;
 					LetAIThink();
@@ -213,6 +218,7 @@ namespace ReversiTutorial.Completed
 			}
 			else if (!board.CanMove())
 			{
+				await Task.Delay(minAIDelayMs);
 				Pass();
 				return;
 			}
