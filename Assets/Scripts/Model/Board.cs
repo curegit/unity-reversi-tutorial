@@ -145,7 +145,7 @@ namespace ReversiTutorial.Model
 		/// <returns>石がある割合</returns>
 		public double FillRate()
 		{
-			return 1.0 - (double)CountEmpty() / size * size;
+			return 1.0 - (double)CountEmpty() / (size * size);
 		}
 
 		/// <summary>
