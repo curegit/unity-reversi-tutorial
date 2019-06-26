@@ -43,10 +43,10 @@ namespace ReversiTutorial.Model
 			this.size = size;
 			turn = Player.Dark;
 			disks = new Player?[size, size];
-			disks[size / 2, size / 2 - 1] = Player.Dark;
-			disks[size / 2 - 1, size / 2 - 1] = Player.Light;
-			disks[size / 2 - 1, size / 2] = Player.Dark;
-			disks[size / 2, size / 2] = Player.Light;
+			disks[size / 2, size / 2 - 1] = Player.Light;
+			disks[size / 2 - 1, size / 2 - 1] = Player.Dark;
+			disks[size / 2 - 1, size / 2] = Player.Light;
+			disks[size / 2, size / 2] = Player.Dark;
 		}
 
 		/// <summary>
