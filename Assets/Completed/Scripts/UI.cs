@@ -14,31 +14,31 @@ namespace ReversiTutorial.Completed
 		/// パスボタン
 		/// </summary>
 		[SerializeField]
-		private Button passButton;
+		private Button passButton = default;
 
 		/// <summary>
 		/// 黒石の数を表示するテキスト
 		/// </summary>
 		[SerializeField]
-		private Text darkDiskCountText;
+		private Text darkDiskCountText = default;
 
 		/// <summary>
 		/// 白石の数を表示するテキスト
 		/// </summary>
 		[SerializeField]
-		private Text lightDiskCountText;
+		private Text lightDiskCountText = default;
 
 		/// <summary>
 		/// 結果を表示するテキスト
 		/// </summary>
 		[SerializeField]
-		private Text resultText;
+		private Text resultText = default;
 
 		/// <summary>
 		/// ゲーム終了時にだすダイアログ
 		/// </summary>
 		[SerializeField]
-		private GameObject gameEndDialog;
+		private GameObject gameEndDialog = default;
 
 		/// <summary>
 		/// 初期化時に呼ばれる

@@ -15,25 +15,25 @@ namespace ReversiTutorial
 		/// 石のオブジェクト
 		/// </summary>
 		[SerializeField]
-		private GameObject disk;
+		private GameObject disk = default;
 
 		/// <summary>
 		/// すべてのタイル
 		/// </summary>
 		[SerializeField]
-		private Square[] squares;
+		private Square[] squares = default;
 
 		/// <summary>
 		/// 黒にAIを使うか（ゲーム途中での変更不可）
 		/// </summary>
 		[SerializeField]
-		private bool useAIDark;
+		private bool useAIDark = default;
 
 		/// <summary>
 		/// 白にAIを使うか（ゲーム途中での変更不可）
 		/// </summary>
 		[SerializeField]
-		private bool useAILight;
+		private bool useAILight = default;
 
 		/// <summary>
 		/// AIの最低思考時間

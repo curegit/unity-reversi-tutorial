@@ -12,7 +12,7 @@ namespace ReversiTutorial.Completed
 		/// 厚さ
 		/// </summary>
 		[SerializeField]
-		private float thickness;
+		private float thickness = default;
 
 		/// <summary>
 		/// ひっくり返しにかける時間
@@ -30,7 +30,7 @@ namespace ReversiTutorial.Completed
 		/// 黒の状態であるときの回転
 		/// </summary>
 		[SerializeField]
-		private Vector3 darkRotation;
+		private Vector3 darkRotation = new Vector3(0f, 0f, 0f);
 
 		/// <summary>
 		/// 白の状態であるときの回転

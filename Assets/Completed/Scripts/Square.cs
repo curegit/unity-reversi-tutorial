@@ -13,31 +13,31 @@ namespace ReversiTutorial.Completed
 		/// x方向の区画座標
 		/// </summary>
 		[SerializeField]
-		private int _x;
+		private int _x = default;
 
 		/// <summary>
 		/// z方向の区画座標
 		/// </summary>
 		[SerializeField]
-		private int _z;
+		private int _z = default;
 
 		/// <summary>
 		/// 何も起こっていないときのマテリアル
 		/// </summary>
 		[SerializeField]
-		private Material defaultMaterial;
+		private Material defaultMaterial = default;
 
 		/// <summary>
 		/// ポインターで指されているときのマテリアル
 		/// </summary>
 		[SerializeField]
-		private Material pointedMaterial;
+		private Material pointedMaterial = default;
 
 		/// <summary>
 		/// 配置可能区画を表すためのハイライトされたマテリアル
 		/// </summary>
 		[SerializeField]
-		private Material highlightedMaterial;
+		private Material highlightedMaterial = default;
 
 		/// <summary>
 		/// ポインターで指されているかどうかのフラグ
