@@ -104,7 +104,22 @@ namespace ReversiTutorial
 				PlaceDiskObject(light.x, light.z, Player.Light);
 			}
 			// 人間/AIの切り替えはここでやる
-			/* ここにコードを追加 */
+			switch (newGameMode)
+			{
+				case 1:
+					useAIDark = false;
+					useAILight = true;
+					break;
+				case 2:
+					useAIDark = true;
+					useAILight = false;
+					break;
+				case 3:
+				default:
+					useAIDark = false;
+					useAILight = false;
+					break;
+			}
 		}
 
 		/// <summary>

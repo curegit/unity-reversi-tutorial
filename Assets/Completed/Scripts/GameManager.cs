@@ -115,6 +115,7 @@ namespace ReversiTutorial.Completed
 					useAILight = false;
 					break;
 				case 3:
+				default:
 					useAIDark = false;
 					useAILight = false;
 					break;
