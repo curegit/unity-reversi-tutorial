@@ -12,8 +12,17 @@
 
 ## 手順書
 
-[Documents](./Documents/) を見てください。
+手順書は [Documents](./Documents/) ディレクトリに置かれています。
+
+### 目次
+
+0. [イントロダクション](./Documents/0-イントロダクション.md)
+1. [プロジェクトの読み込み](./Documents/1-プロジェクトの読み込み.md)
+2. [ものを置いてみよう](./Documents/2-ものを置いてみよう.md)
+3. [オセロ盤をつくる](./Documents/3-オセロ盤をつくる.md)
+4. [石をつくる](./Documents/4-石をつくる.md)
+5. [プレイしてみる](./Documents/5-プレイしてみる.md)
 
 ## ライセンス
 
-[MIT](LICENSE)
+[MIT](./LICENSE)
